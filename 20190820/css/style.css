@@ -1,0 +1,181 @@
+@charset "utf-8";
+@import url(reset.css);
+
+body {
+	font: 15px 'Noto Sans KR', 'sans-serif';
+	color: #585858;
+}
+
+/*header*/
+header {
+	position: relative;
+	width: 1280px;
+	margin: 0 auto;
+	height: 120px;
+}
+header .tnb {
+	position: absolute;
+	top: 10px; right: 0;
+}
+header .tnb a {
+	display: inline-block;
+	padding: 3px 15px;
+	font-size: 14px;
+	color: #666;
+}
+.tnb a:hover {
+	text-decoration: underline;
+	color: #222;
+}
+header .logo {
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	font: 32px 'Righteous', cursive;
+	color: #a50000;
+	text-transform: uppercase; /*영문대문자로 변환*/
+}
+header .call {
+	position: absolute;
+	bottom: 20px; left: 0;
+	font-size: 20px;
+	font-weight: bold;
+	color: #000;
+}
+header .call span {
+	display: inline-block;
+	padding: 3px 10px;
+	border-radius: 5px;
+	background: #207601;
+	color: #fff;
+}
+/*menu*/
+.menu {display: none;}
+
+/*#gnb*/
+#gnb {
+	height: 50px;
+	background: linear-gradient(#b10c0c,#6d0000);	
+}
+#gnb ul {
+	width: 1280px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#gnb li {
+	float: left;
+	width: 20%;
+}
+#gnb li a {
+	display: block;
+	text-align: center;
+	font: 18px/50px 'Raleway', sans-serif;
+	color: #fff;
+	text-shadow: 2px 2px 1px rgba(0,0,0,0.4);
+}
+#gnb li a:hover {
+	background: linear-gradient(#e6a800,#b96b00);
+}
+
+/*#mainImage*/
+#mainImage {
+	position: relative;
+	height: 780px;
+	background: url(../img/main_img01.png) no-repeat center;
+}
+.textBox {
+	position: absolute;
+	bottom: 0; left: 0;
+	width: 100%; /*position: absolute로 선언하게 되면 기본 너비는 콘텐츠의 크기만큼만 적용되므로 필요에 따라 width:100%를 재선언 해야함.*/
+	height: 30%;
+	background: rgba(0,0,0,0.85);
+}
+.innerBox {
+	position: relative;
+	width: 1280px;
+	margin: 0 auto;
+}
+.innerBox h2 {
+	position: absolute;
+	top: 70px;
+	font: 22px 'Raleway', sans-serif;
+	color: rgba(255, 255, 255, 0.6);
+}
+.innerBox h1 {
+	position: absolute;
+	top: 100px;
+	font: 50px 'Righteous', cursive;
+	color: #ffa700;
+}
+/*#bestMenu*/
+#bestMenu article {
+	overflow: hidden;
+	width: 1280px;
+	margin: 0 auto;
+	padding: 50px 40px 70px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+}
+#bestMenu .menuList {
+	position: relative;
+	float: left;
+	width: 400px;
+	margin-right: 40px;
+}
+#bestMenu .menuList:last-child {
+	margin-right: 0
+}
+.menuList .img {
+	height: 220px;
+	overflow: hidden;
+}
+.menuList img {
+	width: 100%;
+}
+.menuList h3 {
+	color: #000;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.menuText {
+	margin-top: 20px;
+}
+.menuText strong {
+	color: #000;
+}
+.menuText p {
+	margin-top: 15px;
+}
+.btnOrder {
+	position: absolute;
+	top: 0; right: 0;
+	display: inline-block;
+	padding: 3px 10px;
+	background: #000;
+	color: #fff;
+}
+.btnOrder:hover {
+	border: 1px solid #b10000;
+	color: #b10000;
+	background: #fff 
+}
+/*footer*/
+footer {
+	line-height: 80px;
+	border-top: 8px solid #ccc;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

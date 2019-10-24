@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+/*reset*/
+html,body,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,div,p,address,blockuote,table,th,td,tr,thead,tbody,tfoot,caption,form,fieldset,legend,header,nav,section,article,aside,footer,figure,main {margin: 0;}
+ul, ol, dl, figure {padding: 0;}
+ul, ol {list-style: none;}
+a {text-decoration: none; color: inherit;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal}
+address,em,i,cite {font-style: normal;}
+
+table {border-collapse: collapse;}
+
+header,
+nav,
+main,
+section,
+article,
+aside,
+figure,
+footer {display: block;}
+
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+  /*float가 적용된 요소의 다음 요소에게 float 속성이 이어지지않도록 float를 해제해주는 선언*/
+}
+
+
+
+
+

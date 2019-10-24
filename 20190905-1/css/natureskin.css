@@ -1,0 +1,175 @@
+@charset "utf-8";
+
+body{
+    font: 15px 'Comfortaa', 'serif';
+    color:#898989;
+    background:linear-gradient(#e0d9d0,#ccbead) fixed;
+}
+/*wrap*/
+.wrap{
+    width:960px;
+    margin:0 auto;
+    background:#fff;
+}
+.innerHeader{
+    position: relative;
+    height: 300px;
+    background:url(../img/main_img02.png) no-repeat center;
+    background-size:cover;
+}
+.innerHeader .logo{
+    position:absolute;   
+    top:50%; right:50px;
+    color:#121212;
+    font-family:'Charmonman';
+    font-weight:bold;
+        
+}
+/*gnb*/
+header .gnb{
+    height:50px;
+    background: rgba(198,16,16,0.7)
+    
+}
+.gnb a{
+    position: relative;
+    display:block;
+    float:left;
+    line-height:50px;
+    width: 25%;
+    text-align:center;
+    color:#eee;
+    font-size:18px;
+    transition: all 0.2s;
+    box-sizing:border-box;
+    
+}
+.gnb a:hover,
+.gnb a:focus{
+    background:#9d0000;
+    padding-right:30px;/*날리는 잎사귀를 위한 공간*/
+}
+.gnb a i {
+    position:absolute;
+    top:15px; right:50px;
+    font-size:20px;
+    opacity: 0;
+    transition: all 0.3s 0.2s;/*트랜지션 속성 실행시간 지연시간*/
+}
+.gnb a:hover i, 
+.gnb a:focus i{
+    right: 30px;
+    opacity: 1;
+    color:#057605;
+}
+/*main*/
+main{padding: 20px 10px; overflow:hidden;}
+main section{
+    width:75%;
+    padding:10px;
+    box-sizing:border-box;
+    float:left;
+}
+section h2{
+    color:#121212;
+    text-align:center;
+}
+
+/*article*/
+article h3{
+    padding: 10px 0;
+    color:#36811a;
+}
+article{
+    margin-bottom:20px;
+}
+.text{
+    letter-spacing:-1px;
+    line-height:1.7;
+    margin-bottom:30px;
+    
+}
+/*aside*/
+main aside{
+    float: right;
+    width:25%;
+    padding:10px;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+main aside a{
+    display:block;
+    margin-bottom: 10px;
+    /*filter*/
+    -webket-filter:grayscale(1); /*사파리*/
+    -ms-filter:grayscale(1); /*익스플로러*/
+    -o-filter:grayscale(1); /*오페라*/
+    -moz-filter:grayscale(1);/*모질라*/
+    filter: grayscale(1);
+    transition:all 0.2s;
+}
+main aside a:hover,
+main aside a:focus{
+    -webket-filter:grayscale(0); /*사파리*/
+    -ms-filter:grayscale(0); /*익스플로러*/
+    -o-filter:grayscale(0); /*오페라*/
+    -moz-filter:grayscale(0);/*모질라*/
+    filter: grayscale(0);
+    outline: 5px solid #d80000;
+}
+footer{
+    background:#222;
+    color:#ddd;
+    line-height:50px;
+}
+footer .copy{
+    text-align:center;
+}
+main aside img{
+    width: 100%;
+    display:block;
+    
+}
+
+
+/*768px*/
+@media screen and (max-width:768px){
+    main section, main aside{width:100%;}
+    main aside a{
+        float:left;
+        width: 300px;
+        height:210px;
+        margin-right:10px;
+        
+    }
+    main aside a:last-chile{margin-right:0;}
+}
+
+/*640이하*/
+@media screen and (max-width:640px){
+    .wrap{width:100px}
+    main section, main aside{width:100%;}
+    .innerHeader{height:100vh;}
+    .innerHeader .logo{
+        font-size:40px;
+        top: 100px; right: 20px;
+        color:#fff;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.4);
+        
+    }
+    header .gnb{
+        width:70%;
+        position: absolute;
+        top: 35%; left:50%;
+        transform:translateX(-50%);
+        background:none;
+    }
+    header .gnb a{
+        width:100%;
+        margin-bottom:20px;
+        background:rgba(211,0,0,0.7);
+        border-radius:3px;
+    }
+    main aside a{width:100%; margin-right:0}
+    
+}

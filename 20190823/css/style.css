@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+body{
+    font:15px 'Roboto', 'sans-serif';
+    color:#585858;
+}
+
+/*header*/
+header{
+    height:140px;
+    width:1280px;
+    margin: 0 auto;
+    
+}
+.logo{
+    float:left;
+    display:block;
+    padding-top:45px;    /*height(140)-font(40)/2 하고 플마5px정도*/
+    font:40px/0.8 'Teko', sans-serif;
+    color:#ac4f1d;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.logo span{
+    display:block;
+    text-indent:30px; /*첫문장의 첫단어만 들여쓰기*/
+}
+form{
+    float: right;
+    margin-top:60px;
+}
+form input{
+    border: 1px solid #ccc;
+    width: 150px;
+    height:25px;
+}
+/*nav*/
+nav{
+    height: 50px;
+    background:#260324;
+    
+}
+#gnb{
+    width:1280px;
+    margin: 0 auto;
+    /*overflow: hidden;*/ /*gnb밑으로 내려가는건 다 hidden으로 숨겨버림*/
+}
+#gnb > li{
+    position: relative;
+    width:20%;
+    float:left;
+    
+}
+#gnb > li > a{
+    display:block;
+    width:100%;
+    line-height: 50px;
+    text-align: center;
+    color:#fff;
+    font-size:18px;
+    
+}
+.on{
+    background:#BF8C6F;
+}
+#gnb li a:hover{
+    background:#BF8C6F;
+}
+/*2depth*/
+#gnb ul{
+    position:absolute;
+    width:100%;
+    text-align:center;
+    display:none;
+}
+#gnb ul li a{
+    display:block;
+    line-height:35px;
+    color:black;
+}
+#gnb > li:hover ul{
+    display:block;
+}
+/*mainImage*/
+#mainImage{
+    height:780px;
+    background: url(../img/photo01.png) no-repeat center;
+    background-size:cover;
+}
+article{
+    position:relative;
+    width:1280px;
+    height:100%;
+    margin: 0 auto;
+    
+}
+.mainText{
+    position:absolute;
+    top: 50%; left:50%;
+    transform:translate(-50%, -50%);
+    color:#fff;
+    text-align:center;
+}
+.mainText h1{
+    font: 60px 'Teko', 'sans-serif';
+}
+.mainText p{
+    color:rgba(255,255,255,0.6);
+}
+/*contents-bestMenu*/
+#contents{
+    margin:50px 0;
+}
+.mainText2{
+    border-radius:10px;
+    background:#BF3434;
+    color:#fff;
+    padding:10px;
+    margin:20px 0;
+    font-size:20px;
+    text-align: center;
+}
+.menuList{
+    overflow:hidden;
+}
+.menuList li{
+    float:left;
+    width:400px;
+    height:400px;
+    margin-right:40px;
+}
+.menuList li:last-child{
+    margin-right:0;
+}
+.menuList .pic{
+    width:100%;
+    height:180px;
+    overflow: hidden;
+    
+}
+.menuList .pic img{
+    width:100%;
+    transition: all 0.3s;
+}
+.menuList .pic:hover img{
+    transform:scale(1.2);
+}
+.menuList .text{
+    margin-top: 20px;
+}
+.menuList .text h2{
+    color: #731425;
+    margin-bottom:15px;
+}
+/*news*/
+.news{
+    margin-top:80px 0 50px;
+}
+.news h2{
+    font-size:20px;
+    color:#731425;
+    font-weight: bold;
+}
+.newsList{
+    overflow:hidden;
+    margin:30px 0 0 0;
+    
+}
+.newsList .newsImage{
+    position:relative;
+    float:left;
+    width:297px;
+    height:220px;
+    margin-right:30px;
+    overflow:hidden;
+}
+.newsList .newsImage:last-child{
+    margin-right:0;
+}
+.newsList img{
+    width:100%;
+    height:100%;
+}
+.newsImage span{
+    position:absolute;
+    top:0; left:0;
+    width:100%;
+    height:100%;
+    background:#000;
+    opacity:0.6;
+    transition: all 0.3s;
+}
+.newsImage:hover span{
+    opacity:0;
+}

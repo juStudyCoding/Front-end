@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>플로트속성을 이용한 페이지레이아웃</title>
+	<link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/all.min.css">
+	<style>
+		* {margin: 0; padding: 0;}
+		li {list-style: none;}
+		a {text-decoration: none; color: inherit}
+		body {
+			font: 15px 'Darker Grotesque', sans-serif;
+			color: #585858
+		}
+		header {
+			background: #ff4667;
+			padding: 30px 0 60px;
+		}
+		h1 {
+			text-align: center;
+		}
+		h1 img {
+			width: 180px;
+			box-shadow: 10px 10px 0 rgba(255,255,255,0.4), 
+				-10px -10px 0 rgba(255,255,255,0.4)
+		}
+		nav {
+			width: 1200px;
+			margin: -25px auto 0;
+			/*overflow: hidden;*/
+			height: 50px;
+			background: #2fa58e
+		}
+		nav a {
+			float: left;
+			display: block;
+			width: 20%;
+			line-height: 50px;
+			text-align: center;
+			color: #fff;
+			font-weight: bold;
+			font-size: 20px;
+		}
+		nav a:hover {
+			background: #236f60
+		}
+		main {
+			width: 1200px;
+			margin: 50px auto;
+			overflow: hidden;
+			font-size: 17px;
+		}
+		main .lnb {
+			float: left;
+			width: 180px;
+			padding: 20px;
+			border: 5px solid rgba(255, 70, 103, 0.7);
+			box-sizing: border-box;
+			/*
+			box-sizing은 사용자가 입력한 width에 padding과 border를 포함시켜서 사용자가 입력한 값과 동일한 레이아웃을 유지시켜주는 속성
+			*/
+		}
+		.lnb li {
+			line-height: 50px;
+			border-bottom: 1px dotted #ccc;
+			font-size: 22px;
+			font-weight: bold;	
+			color: #ff4667
+		}
+		.lnb li:last-child {border-bottom: 0}
+		.lnb li i {color: #ff4667}
+		main .contents {
+			float: right;
+			width: 960px;
+		}
+		.contents h2 {
+			display: inline-block;
+			padding-top: 5px;
+			border-top: 3px solid #236f60;
+			color: #000;
+			font-size: 22px;
+		}
+		.contents .desc {
+			margin: 30px 0;
+		}
+		.contents figure {
+			padding: 0;
+			margin-top: 50px;
+		}
+		.contents figure a {
+			display: block;
+			float: left;
+			width: 300px;
+			height: 210px;
+			margin-right: 30px;
+			overflow: hidden;
+		}
+		.contents figure a:last-child {margin-right: 0} 
+		.contents figure img {
+			width: 100%
+		}
+		footer {
+			width: 1200px;
+			margin: 0 auto;
+			line-height: 60px;
+			border-top: 5px solid #2fa58e;
+			text-align: center;
+			font-size: 18px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1><img src="img/sub_img02.png" alt=""></h1>
+	</header>
+	<nav>
+		<a href="#">MENU01</a>
+		<a href="#">MENU02</a>
+		<a href="#">MENU03</a>
+		<a href="#">MENU04</a>
+		<a href="#">MENU05</a>
+	</nav>
+	<main>
+		<ul class="lnb">
+			<li><a href="#">
+				<i class="fab fa-envira"></i> sub1</a>
+			</li>
+			<li><a href="#">
+				<i class="fab fa-envira"></i> sub2</a>
+			</li>
+			<li><a href="#">
+				<i class="fab fa-envira"></i> sub3</a>
+			</li>
+			<li><a href="#">
+				<i class="fab fa-envira"></i> sub4</a>
+			</li>
+		</ul>
+		<section class="contents">
+			<h2>Section Title#01</h2>
+			<p class="desc">
+				Donec porta tincidunt lectus in pellentesque. Nunc vel lacus vel neque gravida vestibulum. Phasellus nec nisl euismod, egestas quam non, vestibulum est. Praesent tellus felis, consectetur eu elit vel, consectetur pellentesque mi. Proin a purus sit amet lorem convallis ultrices et sed quam. Pellentesque sodales lectus diam, varius mattis augue vulputate et. Curabitur libero ex, placerat id consequat vitae, porttitor sed nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sit amet velit turpis. Duis non orci et augue pellentesque dictum. Nulla a est non eros porttitor lacinia. Pellentesque et quam pulvinar, sollicitudin eros vel, sagittis enim. Maecenas rhoncus faucibus nibh, a aliquet ligula blandit at. Ut lobortis, ipsum a porta porttitor, massa dui maximus augue, ac fermentum mauris sapien mollis ipsum. Maecenas iaculis elit in arcu luctus, ac fermentum nunc euismod.
+			</p>
+			<p>
+				Nulla feugiat aliquet nulla vel aliquet. Donec malesuada augue rutrum, dignissim sapien ac, aliquet tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer ultricies gravida nisl, vel aliquam quam rutrum vel. Suspendisse vehicula, ex eu efficitur sagittis, tellus nisl malesuada ipsum, et dignissim nunc lacus non dolor. Cras dictum imperdiet turpis a tristique. Aenean ac eleifend lacus, at vehicula elit. Praesent ex elit, ullamcorper in felis ac, tempus dignissim erat. Aenean elit arcu, fringilla id pellentesque in, tristique eget nibh. Vestibulum in elementum leo, vitae aliquam risus. Praesent fringilla facilisis luctus. Aenean cursus sagittis laoreet. Vestibulum sem nisi, varius sit amet porttitor vitae, auctor efficitur neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+			</p>
+			<figure>
+				<a href="#">
+					<img src="img/sub_img01.png" alt="">
+				</a>
+				<a href="#">
+					<img src="img/sub_img03.png" alt="">
+				</a>
+				<a href="#">
+					<img src="img/sub_img04.png" alt="">
+				</a>
+			</figure>
+		</section>		
+	</main>
+	<footer>
+		<p>copyright 2019.</p>
+	</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
